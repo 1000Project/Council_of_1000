@@ -79,7 +79,7 @@ We recently brainstormed and established a strategic framework balancing real-wo
 
 ## What’s Next?
 
-- **Beta Release:** A public testnet launch is planned soon to gather feedback from early adopters.
+- **Beta Release:** A public testnet launch of the core token is planned soon to gather feedback from early adopters.
 - **Gameplay Refinement:** Ongoing updates to interactive mechanics and core game design principles, ensuring a balanced and engaging player experience.
 - **AI Bot Expansion:** Enhancing the role of our AI bot to optimize player engagement and community interaction.
 - **Exclusive Community Events:** Look forward to live AMAs, tournaments, and more opportunities to shape the game.
