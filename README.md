@@ -75,11 +75,13 @@ To make the game accessible to non-crypto users, we’re integrating fiat-to-cry
 
 We recently brainstormed and established a strategic framework balancing real-world development and forward-thinking creativity. This approach ensures forward momentum while continuously identifying future opportunities, creating flawless value and harmonic alignment between the moving parts of the 1000 ecosystem.
 
+We’re designing scalable infrastructure to support both growth and innovation, integrating community feedback at every step. As we expand gameplay mechanics, custom card features, and real-time battle simulations, the project remains on track to deliver an exceptional player experience.
+
 ---
 
 ## What’s Next?
 
-- **Beta Release:** A public testnet launch of the core token is planned soon to gather feedback from early adopters.
+- **Beta Release:** A public testnet launch of the core token and initial gameplay mechanics is planned soon to gather feedback from early adopters.
 - **Gameplay Refinement:** Ongoing updates to interactive mechanics and core game design principles, ensuring a balanced and engaging player experience.
 - **AI Bot Expansion:** Enhancing the role of our AI bot to optimize player engagement and community interaction.
 - **Exclusive Community Events:** Look forward to live AMAs, tournaments, and more opportunities to shape the game.
@@ -95,6 +97,7 @@ We encourage you to stay engaged and contribute to the success of the Council of
 - **[Telegram Channel](https://t.me/The1000Project)** for real-time updates and discussions.
 - **[X (formerly Twitter)](https://x.com/1000CryptoAI)** for announcements and teasers.
 - **[GitHub Repository](https://github.com/1000Project/Council_of_1000)** to stay up to date with development.
+- **[Medium Article](https://the1000project.medium.com/the-council-of-1000-isnt-just-another-blockchain-game-it-s-a-gateway-to-the-future-of-digital-4467cc2028af)** for a deep dive into our vision and progress.
 
 ---
 
