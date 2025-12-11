@@ -1,109 +1,138 @@
-# Council of 1000: Comprehensive Introduction
+# Council of 1000 – The Official Trading Card Game of The 1000 Project  
+_A Competitive, Lore-Rich, Champion-Centric PvP TCG_
 
-Welcome to the central hub for **Council of 1000**—a game-changing, blockchain-powered PVP NFT card-collecting video game and the core of the **1000 Project** ecosystem. Whether you found us through X, Telegram, or directly, this guide will bring you up to speed on all our recent progress and what’s ahead. Stay tuned, as this file will be continuously updated to reflect project milestones.
+Council of 1000 is a **competitive NFT-supported PvP trading card game** set in the Thousandfold Realm — a fractured metaphysical world shaped by one thousand legendary Champions. Each Champion embodies a distinct philosophical force, giving rise to the Realms, factions, conflicts, and meta-struggles that define the game.
 
----
-
-## Project Overview
-
-The **Council of 1000** is a turn-based strategy game where players collect NFT card packs, battle in immersive environments, and participate in tournaments to win real prizes. At its heart, the game leverages blockchain technology to deliver digital ownership, revenue-sharing, and community-driven development—all tied to the **1000 token**, our native cryptocurrency.
-
-We’re merging cutting-edge visuals with deep strategy and economic incentives, creating a digital collectible game built for gamers and investors alike.
+This repository contains the **public canon**, **design architecture**, **lore bible**, and **mechanical systems** for the Council of 1000 TCG.
 
 ---
 
-## Key Features and Mechanics
+## 🜂 Core Identity
 
-### NFT Card Packs
+Council of 1000 is built on three pillars:
 
-- **Serialized for Authenticity:** Every card is digitally serialized, ensuring that players own unique, verifiable assets.
-- **Dynamic Rarity and Value:** Players can collect cards of varying rarity, each affecting gameplay and strategic options.
-- **Revenue Sharing:** A portion of every card pack sale (5% or more) is allocated as **Council Tax**, providing ongoing dividends to **Council of 1000 NFT holders**.
+### **1. The 1000 Champions**
+One thousand mythic figures, each representing a powerful worldview or discipline.  
+Champions shape deck strategy, faction identity, and progression.
 
-### Dual Gaming Modes
+### **2. The Council of Realms (Factions)**
+The Thousandfold Realm is governed by competing ideological Realms.  
+Each Realm has:
+- A distinct philosophy  
+- A unique mechanical identity  
+- Specific Champion archetypes  
+- Exclusive card pools  
 
-- **Classic Mode:** Pure strategic gameplay using a standard deck of cards, perfect for purist players.
-- **Advanced Mode:** Unlock customizations through **card leveling**, strategic upgrades, and **Build Your Own Card (BYOC)** options, where players can allocate attribute points and build 1 to 5 cards using a preallocated number of points.
+*(See `/docs/lore/Realms.md`)*
 
-### Card Leveling & Customization
+### **3. Ascending Ranks**
+Players rise through competitive tiers through:
+- Skill  
+- Mastery  
+- Accomplishment  
 
-- **Progressive Evolution:** Players can level up their cards by earning experience points (XP) in battles.
-- **Personalized Decks:** Customize your cards to suit your playstyle and gain a competitive edge in PVP battles.
-
-### Scene Visualizations & PvP Battles
-
-We are currently evaluating Unity and Unreal Engine 5 to build a visually stunning experience. Players will battle in immersive environments with cinematic effects, random kill animations, and dynamic modifiers to make every match unpredictable and engaging.
-
----
-
-## AI Telegram Bot Integration
-
-We are designing a proprietary **AI-powered Telegram bot** that will provide:
-
-- Real-time updates on gameplay, tournaments, and community events.
-- Support for new players as they learn to navigate the game and ecosystem.
-- Integration with website feeds to showcase real-time community contributions.
-
-**Note:** Tournament signups and payments are managed directly within the **dApp**, ensuring secure transactions using the **1000 token**.
-
-A portion (5%) of all tournament and game-related fees will be used for **buyback and burn**, reducing token supply and enhancing long-term value.
+This is a **merit-first system**, not tied to tokens, staking, or holdings.
 
 ---
 
-## 1000 Token: The Core of the Ecosystem
+## 🜁 Game Philosophy
 
-The **1000 token** is the native currency of the Council of 1000 game and its ecosystem. Players will use it for:
+Council of 1000 is:
 
-- **Tournament registrations and in-game fees**
-- **Purchasing NFT card packs**
-- **Unlocking premium content and customizations**
-
-### Fiat-to-Crypto Onboarding
-
-To make the game accessible to non-crypto users, we’re integrating fiat-to-crypto options directly within the game wallet. Gamers will be able to purchase **1000 tokens** using USDC, acquired through services like Ramp and Moonpay.
+- **Game-First** – Designed to be fun, deep, and strategically rich without requiring blockchain knowledge.
+- **Champion-Centric** – Your Champion defines your deck’s mechanics, win conditions, and faction alignment.
+- **Lore-Driven** – Every card, keyword, and expansion is anchored in the Thousandfold narrative.
+- **NFT-Supported** – Ownership enhances the experience where useful (cards, packs, cosmetics), without intruding on gameplay.
+- **Studio-Structured** – Built from day one as a multi-expansion, multi-year franchise.
 
 ---
 
-## Revenue Sharing Opportunities
+## 🜄 Gameplay Overview (High-Level)
 
-- **Council of 1000 NFT Holders:** Holders of these ultra-rare NFTs will receive dividends from card pack sales.
-- **Tournament Fees and Prizes:** Players who participate in tournaments and blitz campaigns will have opportunities to win real monetary prizes.
+A match in Council of 1000 follows the **canonical flow** defined in the Game Design Bibles:
 
----
+- **Resource System**: Influence  
+- **Turn Structure**: Draw → Influence → Main → Combat → End  
+- **Victory Conditions**:
+  - Reduce opponent’s Resolve  
+  - Exhaust their deck  
+  - Champion-based alternate win triggers  
 
-## Development Progress
+### **Core Card Types**
+- **Champion** – Defines your deck and core abilities  
+- **Units** – Allies, constructs, or summoned embodiments  
+- **Actions** – Maneuvers, spells, tactics  
+- **Relics** – Persistent board effects  
+- **Seat Cards** – Ultra-rare legendary effects tied to the Council itself  
 
-We recently brainstormed and established a strategic framework balancing real-world development and forward-thinking creativity. This approach ensures forward momentum while continuously identifying future opportunities, creating flawless value and harmonic alignment between the moving parts of the 1000 ecosystem.
-
-We’re designing scalable infrastructure to support both growth and innovation, integrating community feedback at every step. As we expand gameplay mechanics, custom card features, and real-time battle simulations, the project remains on track to deliver an exceptional player experience.
-
----
-
-## What’s Next?
-
-- **Beta Release:** A public testnet launch of the core token and initial gameplay mechanics is planned soon to gather feedback from early adopters.
-- **Gameplay Refinement:** Ongoing updates to interactive mechanics and core game design principles, ensuring a balanced and engaging player experience.
-- **AI Bot Expansion:** Enhancing the role of our AI bot to optimize player engagement and community interaction.
-- **Exclusive Community Events:** Look forward to live AMAs, tournaments, and more opportunities to shape the game.
+*(See `/docs/mechanics/Card_Types.md`)*
 
 ---
 
-## Stay Connected
+## 🜁 On-Chain Elements
 
-We encourage you to stay engaged and contribute to the success of the Council of 1000 and the 1000 Project. Whether you’re a gamer, token holder, or community supporter, your voice matters.
+Blockchain is used **only where it adds real value**, as defined in the Executive Master Bible:
 
-**Join us on:**
+- NFT **card ownership**
+- NFT **pack minting** with verifiable randomness
+- Cosmetic prestige collectibles (badges, titles, skins)
+- Seasonal achievement proofs
 
-- **[Telegram Channel](https://t.me/The1000Project)** for real-time updates and discussions.
-- **[X (formerly Twitter)](https://x.com/1000CryptoAI)** for announcements and teasers.
-- **[GitHub Repository](https://github.com/1000Project/Council_of_1000)** to stay up to date with development.
-- **[Medium Article](https://the1000project.medium.com/the-council-of-1000-isnt-just-another-blockchain-game-it-s-a-gateway-to-the-future-of-digital-4467cc2028af)** for a deep dive into our vision and progress.
+All gameplay mechanics are **off-chain**, ensuring fair, fast, secure competitive play.
 
 ---
 
-**Together, let’s redefine gaming with blockchain technology.**
+## 🜂 Repository Structure
 
-Built different for visionaries, innovators, and pioneers who push beyond the limits of what is known. This project is for those who dare to think ahead, break molds, and shape the future of gaming, technology, and community-driven ecosystems.
+This repo follows the official architecture defined in the Studio Design Bible:
 
-Community-driven. Community-built.
+
+Council_of_1000/
+  ├── docs/
+   │ ├── lore/
+   │ ├── mechanics/
+   │ ├── design/
+     │ └── tech/
+  ├── client/ # Godot client (placeholder)
+  ├── server/ # Match engine (Python backend placeholder)
+  ├── contracts/ # NFT pack + card architecture
+  └── tests/
+
+
+See `/docs/README.md` for detailed documentation indexes.
+
+---
+
+## 🜁 Project Status
+
+This repository contains:
+
+- Canon lore from the **Executive Master Bible**  
+- Mechanical systems from the **Master Bible Condensed**  
+- Technical structure from the **Studio Design Bible**  
+- The official foundation for the public-facing TCG project  
+
+Development phases will be documented here as the prototype progresses.
+
+---
+
+## 🜂 License & Rights
+
+All lore, mechanics, art, and game systems in this repository are **intellectual property of Clifton M. Freeman** and protected under applicable copyright.
+
+External contributors must receive explicit permission to submit PRs or derivative works.
+
+---
+
+## 🜁 About the Project
+
+Council of 1000 is the flagship game of The 1000 Project — a universe built around philosophy, conflict, myth, and mastery.
+
+This is the culmination of:
+- A complete narrative bible  
+- A competitive PvP ruleset  
+- A purpose-driven NFT ownership model  
+- A multi-year expansion strategy  
+
+Welcome to the Thousandfold Realm.
 
