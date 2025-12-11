@@ -1,271 +1,255 @@
-NFT Pack System
+# NFT Pack System  
+_The Verifiable Backbone Behind Every Pack_
 
-The Blockchain-Based Pack Minting, Rarity, and Ownership Framework for Council of 1000
+The NFT Pack System is responsible for minting booster packs, generating secure randomness, enforcing rarity distributions, and producing collectible NFT cards in Council of 1000.
 
-The NFT Pack System defines how Council of 1000 integrates blockchain technology (Shido network) for card ownership, booster pack minting, rarity distribution, verifiable randomness, and asset management. This system provides collectible value without affecting gameplay balance or introducing pay-to-win dynamics.
+It ensures that pack openings are:
 
-1. Token Standards & Structure
+- fair  
+- tamper-proof  
+- publicly auditable  
+- replayable for verification  
+- economically consistent  
+- independent from gameplay balance  
 
-Council of 1000 uses:
+This document describes *how* packs are opened and resolved, from creation to final NFT delivery.
 
-ERC-1155 (or Shido-equivalent) for most card NFTs
+---
 
-ERC-721 for ultra-rare cards such as Seat NFTs
+# 🜂 Architectural Position
 
-IPFS/Arweave for media & metadata
+The Pack System sits between:
 
-Off-chain → on-chain syncing for cosmetic updates
+### **Blockchain → VRF → Pack Logic → NFT Minting → Client Reveal**
 
-NFT Metadata Schema
-{
-  "name": "Herald of the Veil",
-  "description": "An agent of secrets wielding layered illusions.",
-  "image": "ipfs://.../herald.png",
-  "realm": "Veil",
-  "rarity": "Epic",
-  "cardType": "Unit",
-  "stats": { "attack": 2, "health": 3 },
-  "set": "Fractured Council",
-  "collectorNumber": "045/212"
-}
-Metadata may update visually (alt frames, effects), but gameplay attributes never change.
+It is responsible for:
 
-2. Booster Packs as NFTs
+- creating pack NFTs  
+- requesting VRF randomness  
+- applying rarity tables  
+- minting NFT cards  
+- burning opened packs  
+- emitting reveal events  
 
-Each booster pack is minted as an NFT containing:
+It **does not** manage gameplay rules or card balance.
 
-the expansion set
+---
 
-VRF seed
+# 🜁 Core Constructs
 
-rarity table
+The system revolves around four primary components:
 
-reveal state
+1. **Pack NFTs**  
+2. **VRF Randomness**  
+3. **Rarity Tables**  
+4. **Minting Output**
 
-Example Pack Metadata
+Each is described below.
 
-{
-  "packType": "Standard",
-  "set": "Fractured Council",
-  "vrfSeed": "0xabc123...",
-  "contentsRevealed": false
-}
+---
 
-Opening a pack:
+# 1. Pack NFTs
 
-Contract requests VRF
+Pack NFTs represent sealed boosters that contain randomized card outcomes.
 
-VRF returns verifiable randomness
+Each pack includes:
 
-Pack NFT burns
+- pack type (Standard, Premium, Realm, Seat)  
+- expansion set  
+- VRF request seed  
+- rarity table reference  
+- reveal state  
 
-Card NFTs mint to the player’s wallet
+Packs may be bought, sold, or transferred.  
+Once opened, the pack NFT is burned permanently.
 
-Unopened packs remain tradable.
+---
 
-3. Verifiable Randomness (VRF)
+# 2. VRF Randomness
 
-VRF ensures distribution is:
+VRF (Verifiable Random Function) guarantees that pack contents are:
 
-tamper-proof
+- unpredictable  
+- cryptographically secure  
+- immune to manipulation  
+- verifiable on-chain  
+- reproducible for audits  
 
-publicly verifiable
+### Pack Opening Flow
 
-unpredictable
+1. Player calls `openPack(packId)`  
+2. Contract requests a VRF value  
+3. VRF fulfills with randomness + proof  
+4. Contract verifies the proof  
+5. Rarity tables determine outcomes  
+6. NFTs mint to the player  
+7. Pack NFT burns  
+8. Reveal events emitted  
 
-audit-friendly
+VRF replaces all client-side or server-side randomness.
 
-Pack Opening Flow
+---
 
-Player calls openPack(packId)
+# 3. Rarity Tables
 
-Contract requests VRF
+Each expansion defines its own rarity distribution.
 
-VRF returns randomness
+Typical structure:
 
-Contract applies rarity algorithm
+- **Common**  
+- **Rare**  
+- **Epic**  
+- **Legendary**  
+- **Mythic**  
+- **Seat** (ultra-limited)
 
-NFTs mint
+### Example Weighting
 
-Pack burns
+- 65% Common  
+- 22% Rare  
+- 10% Epic  
+- 2% Legendary  
+- 0.5% Mythic  
+- <0.1% Seat  
 
-Randomness never comes from the client or centralized servers.
+Rarity tables are permanent once published.
 
-4. Rarity Tables
-Rarity	Odds per Card	Guaranteed?
-Common	~65%	Yes
-Rare	~22%	At least 1 per pack
-Epic	~10%	Not guaranteed
-Legendary	~2%	Not guaranteed
-Mythic	~0.5%	Special packs only
-Seat Card	<0.1%	Event-only
-Standard Pack Composition
+---
 
-6 Commons
+# 4. Minting Logic
 
-2 Rares
+Minting logic maps VRF randomness to specific NFT outputs.
 
-1 Epic+ slot
+Process:
 
-Rarity Algorithm
-result = VRF_value % totalWeight  
-walk rarity table until threshold reached
+1. VRF produces random values  
+2. Each value is checked against rarity weights  
+3. A specific card is selected within that rarity tier  
+4. ERC-1155 or ERC-721 NFTs mint to the player  
+5. Pack NFT is burned  
 
-5. Anti-Bot and Anti-Whale Protections
+Every mint event is logged and traceable.
 
-To preserve fairness:
+---
 
-pack-opening rate limits
+# 🜃 Pack Types
 
-VRF commitment flow
+Council of 1000 supports multiple pack types:
 
-high-frequency wallet protection
+- **Standard Pack** — baseline rarity distribution  
+- **Premium Pack** — higher Epic/Legendary odds  
+- **Seat Pack** — guaranteed Legendary with ultra-rare Seat chances  
+- **Realm Pack** — themed toward a specific Realm  
 
-contract pause switch
+Each pack type uses a unique rarity structure and slot formula.
 
-prevention of “reroll by mempool-sniping”
+---
 
-6. Pack Opening Flow (Client → Blockchain)
+# 🜄 Crafting and Burning
 
-User selects "Open Pack"
-
-Transaction sent to contract
-
-VRF returns randomness
-
-Contract mints NFTs
-
-Client animates reveal sequence
-
-Collection updates via blockchain indexer
-
-The client only displays results confirmed by chain events.
-
-7. Integration With Match Engine
-
-NFT ownership impacts cosmetics only, not gameplay.
-
-Server uses authoritative card database
-
-NFT frames / alt arts appear in-match
-
-Animated Legendary borders permitted
-
-Seat NFTs unlock prestige visual effects
-
-Gameplay remains 100% balanced and server-driven.
-
-8. Crafting and Burning System (Optional)
-
-Players may burn duplicates to craft higher-rarity NFTs.
+Players may burn duplicate NFTs to craft higher-tier collectibles.
 
 Example recipes:
 
-5 × Common → 1 Rare
+- 5 Common → 1 Rare  
+- 3 Rare → 1 Epic  
+- 2 Epic → 1 Legendary  
 
-3 × Rare → 1 Epic
+Crafting affects collectibles only.  
+Gameplay card availability is controlled by the server, not NFT supply.
 
-2 × Epic → 1 Legendary
+---
 
-This uses ERC-1155 burn/mint operations.
+# 🜅 Anti-Bot and Anti-Whale Controls
 
-Crafting does not affect gameplay card availability.
+The Pack System implements safeguards such as:
 
-9. Marketplace Integration
+- rate limits on pack openings  
+- non-replayable VRF requests  
+- protection from “reroll sniping”  
+- wallet reputation checks (optional)  
+- system-wide pause functions  
 
-Supports:
+These ensure fair distribution and economic stability.
 
-peer-to-peer NFT trading
+---
 
-auctions
+# 🜆 Storage and Metadata
 
-filtering by Realm, rarity, set, price
+NFT metadata is stored on:
 
-optional creator royalty (2.5–5%)
+- **IPFS**  
+- **Arweave**
 
-Seat Cards act as prestige anchors in the ecosystem.
+Each card includes:
 
-10. Authenticity and Security Guarantees
+- name  
+- rarity  
+- set  
+- artwork reference  
+- collector number  
 
-Every NFT card is:
+Gameplay stats remain server-side and are not pulled from metadata.
 
-VRF-generated
+---
 
-immutable
+# 🜇 Marketplace Integration
 
-hash-verified
+NFT cards and packs can be:
 
-protected against duplication
+- bought  
+- sold  
+- auctioned  
+- transferred  
 
-linked to server-authoritative card ID
+Collectors benefit from:
 
-validated on ingestion
+- verifiable scarcity  
+- transparent provenance  
+- optional royalty-enabled ecosystems  
 
-The system enforces provable scarcity and player trust.
+Seat Cards serve as prestige items with historical ownership tracking.
 
-11. Pack Types
-Standard Pack
+---
 
-Baseline distribution.
+# 🜈 Client Responsibilities
 
-Premium Pack
+The client handles:
 
-Improved Epic/Legendary odds.
+- reveal animations  
+- inventory updates  
+- displaying rarity frames  
+- syncing with blockchain events  
 
-Seat Pack (Event-Only)
+The client does **not** determine results.  
+It only renders outcomes confirmed by the chain.
 
-Guaranteed Legendary + <1% Seat odds.
+---
 
-Realm Pack
+# 🜉 Security Guarantees
 
-Realm-specific collections for Dominion, Veil, Genesis, etc.
+The system ensures:
 
-12. Summary
+- no duplicate mints  
+- no manipulated outcomes  
+- verifiable VRF usage  
+- immutable mint logs  
+- deterministic replayability  
 
-The NFT Pack System provides:
+Auditability is built in at every stage.
 
-verifiable fairness
+---
 
-secure ownership
+# 🜊 Summary
 
-collectible scarcity
+The NFT Pack System provides Council of 1000 with:
 
-a market-based economy
+- provably fair randomness  
+- secure collectible ownership  
+- transparent rarity enforcement  
+- scalable minting  
+- gameplay-neutral distribution  
+- a robust economic layer  
 
-cosmetic differentiation
-
-seamless integration with the TCG’s server-authoritative rules
-
-This transforms Council of 1000 into a modern, secure, player-owned digital TCG ecosystem built on the Shido network.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+It forms the foundation of the game’s collectible economy while maintaining competitive integrity.
 
