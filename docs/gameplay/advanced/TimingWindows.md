@@ -241,3 +241,63 @@ When multiple events occur simultaneously:
 ### **8.2 Realm-specific modifiers**
 Some Realms modify tie-breaking:
 - Paradox may reorder probabilistic effects  
+- Ruin may force death before buff resolution  
+- Genesis transformation may pre-empt stat buffs  
+
+### **8.3 Replacement rules apply last**
+Replacement effects apply to the event before it is finalized.
+
+---
+
+# 🜄 9. Realm Timing Modifiers  
+
+### **Dominion**
+- Rally evaluates immediately on attack declaration  
+
+### **Veil**
+- Can alter visibility → affecting timing legality  
+
+### **Ruin**
+- Decay triggers after damage but before state-based destruction checks  
+
+### **Genesis**
+- Evolve checks may occur mid-phase  
+- Bloom may trigger in any window that includes healing  
+
+### **Paradox**
+- Flux outcomes occur as atomic events  
+- Thread branches resolve at the earliest legal window after evaluation  
+
+### **Solace**
+- Prevention effects apply before damage modification layers  
+
+### **Null**
+- Suppression may override trigger access  
+- Voidcast modifies resolution timing  
+
+---
+
+# 🜅 10. Timing Violations  
+
+An action is illegal if:
+- performed outside a valid window  
+- violating priority order  
+- ignoring Realm timing restrictions  
+- attempting to modify an event after finalization  
+
+Illegal actions:
+- do not resolve  
+- do not use the Stack  
+- return priority to the opponent  
+
+---
+
+# 🜆 11. Summary  
+
+This document defines the **expanded timing model** for Council of 1000.  
+It is readable, complete, and suitable for gameplay, design, and high-level engineering reference.
+
+A more exhaustive developer version is available in the  
+`TimingWindows_Extended.md` document for internal engine implementation.
+
+---
