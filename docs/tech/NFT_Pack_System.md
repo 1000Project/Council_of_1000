@@ -1,372 +1,218 @@
-# NFT Pack System  
-_The Blockchain-Based Pack Minting, Rarity, and Ownership Framework for Council of 1000_
+NFT Pack System
 
-This document defines how Council of 1000 integrates with blockchain technology (Shido network) for card ownership, booster packs, rarity guarantees, VRF-based fairness, and player asset management.
+The Blockchain-Based Pack Minting, Rarity, and Ownership Framework for Council of 1000
 
-This system allows players to **own**, **trade**, **collect**, and **verify** rare cards using decentralized infrastructure while preserving balanced gameplay.
+This document defines how Council of 1000 integrates with blockchain technology (Shido network) for NFT card ownership, booster packs, rarity guarantees, VRF-based fairness, and player asset management.
 
-The NFT Pack System includes:
+This system allows players to own, trade, collect, and verify rare cards while preserving balanced gameplay.
 
-1. NFT standards & metadata  
-2. Booster pack minting  
-3. VRF randomness  
-4. Rarity tables  
-5. Anti-bot protections  
-6. Pack opening flow  
-7. Marketplace considerations  
-8. Integration with the match engine  
-
----
-
-# 🜂 1. Token Standards & Structure
+1. Token Standards & Structure
 
 Council of 1000 uses:
 
-- **ERC-1155** (or Shido equivalent) for card NFTs  
-- **ERC-721** optional for ultra-rare “Seat Cards”  
-- **Off-chain -> On-chain bridges** for metadata updates  
+ERC-1155 for card NFTs
 
-### Reasons:
-- ERC-1155 allows multiple copies of a card  
-- Lower gas fees  
-- Efficient for packs, crafting, and burning  
-- Supports both fungible (currency) and non-fungible (cards) assets  
+ERC-721 optional for ultra-rare Seats
 
-### Token Structure
+IPFS/Arweave for metadata
 
-Token ID: unique integer per card/frame
-Quantity: number of copies owned
-Metadata: JSON (IPFS or Arweave)
+Off-chain → on-chain JSON syncing
 
-
----
-
-# 🜁 2. NFT Metadata Schema
-
-Each NFT card uses:
-
-```json
+Token schema example:
 {
   "name": "Herald of the Veil",
-  "description": "An agent of secrets wielding layered illusions.",
-  "image": "ipfs://.../herald_veil.png",
+  "description": "An agent of secrets...",
+  "image": "ipfs://.../herald.png",
   "realm": "Veil",
   "rarity": "Epic",
   "cardType": "Unit",
-  "stats": {
-    "attack": 2,
-    "health": 3
-  },
+  "stats": { "attack": 2, "health": 3 },
   "set": "Fractured Council",
-  "collectorNumber": "045/212",
-  "animation_url": "ipfs://.../fx.webm"
+  "collectorNumber": "045/212"
 }
 
-Metadata may evolve for visual upgrades (skins, alt frames), but gameplay stats never change.
+2. Booster Packs as NFTs
 
-🜃 3. Booster Packs as NFTs
-A pack is its own NFT, containing:
-set identifier
-rarity table seed
+Packs are ERC-1155 or ERC-721 tokens with:
+
+set ID
+
+rarity seed
+
 VRF request ID
-mint timestamp
 
-Pack NFT structure:
+contentsRevealed: false
+
 {
   "packType": "Standard",
   "set": "Fractured Council",
-  "vrfSeed": "0xabc123...",
+  "vrfSeed": "0xabc...",
   "contentsRevealed": false
 }
 
-When a player opens a pack:
 
-VRF returns randomness
+Opening a pack:
 
-Server or contract derives card pulls
+Request VRF
 
-Pack NFT “burns”
+Receive randomness
 
-Card NFTs mint into the player’s wallet
+Burn pack
 
-Pack NFTs can be:
+Mint card NFTs
 
-traded
+3. VRF (Verifiable Random Function)
 
-sold unopened
+VRF ensures:
 
-used for special events
+tamper-proof randomness
 
-🜄 4. VRF (Verifiable Random Function)
+no server manipulation
 
-All pack randomness must be:
+public verifiability
 
-cryptographically secure
+Pack opening uses:
 
-publicly verifiable
+Shido VRF or Chainlink VRF
 
-tamper-proof
+Re-roll prevention
 
-resistant to prediction
+Public randomness proofs
 
-resistant to manipulation
+Flow:
 
-Council of 1000 uses:
-
-Shido VRF or Chainlink VRF equivalent
-
-Server never generates pack randomness
-
-Every pull can be verified on-chain
-
-VRF Flow:
-
-Player calls openPack(packId)
+User calls openPack()
 
 Contract requests VRF
 
-VRF returns randomness
+VRF responds
 
-Contract applies rarity algorithm
+Contract mints NFT cards
 
-Mints card NFTs
+Pack NFT burns
 
-Emits event PackOpened(packId)
+4. Rarity Tables
+Rarity	Odds per Card	Guaranteed?
+Common	~65%	Yes
+Rare	~22%	At least 1
+Epic	~10%	No
+Legendary	~2%	No
+Mythic	~0.5%	Special packs
+Seat	<0.1%	Event only
 
-🜅 5. Rarity Tables
-
-Each expansion defines rarity distribution:
-
-Rarity	Odds per card	Guaranteed?
-Common	~65%	Always
-Rare	~22%	At least 1 per pack
-Epic	~10%	Not guaranteed
-Legendary	~2%	Not guaranteed
-Mythic	~0.5%	Special packs only
-Seat Cards	<0.1%	Ultra-limited, event-only
-
-Pack Composition Example:
+Pack sample:
 
 6 Commons
 
 2 Rares
 
-1 Epic+ slot
+1 Epic+
 
-Algorithm:
+5. Anti-Bot / Anti-Whale Protections
 
-result = VRF % totalWeight
-walk rarity table to determine outcome
+rate-limit opening
 
-🜆 6. Anti-Bot & Anti-Whale Safeguards
+VRF commit-reveal
 
-To maintain fair distribution:
+bot detection from mint rate
 
-1. Opening Rate Limits
+contract pausable
 
-No mass-open scripts
+no mass-open scripts
 
-1 pack per block per wallet (configurable)
+6. Opening Flow (Client → Blockchain)
 
-2. Wallet Reputation Score (optional)
+Player clicks Open Pack
 
-Prevents malicious high-frequency minting
+openPack(packId) tx sent
 
-3. VRF Commitment Scheme
+Contract requests VRF
 
-Prevents "rerolling" by reading mempool randomness
+VRF returns result
 
-4. Contract Pausable
+Contract mints NFTs
 
-Emergency circuit breaker
+Client animates the reveal
 
-🜇 7. Pack Opening Experience (Client → Blockchain)
-Step 1 — User clicks “Open Pack”
+7. Integration with Match Engine
 
-Client sends:
+Ownership affects cosmetics only, not gameplay.
 
-openPack(packId)
+Server uses its own card database
 
-Step 2 — Contract requests VRF
+NFT frames, effects, prestige animations allowed
 
-The request ID is emitted on-chain.
+No pay-to-win
 
-Step 3 — Server listens for VRF fulfillment
+8. Crafting / Burn System (Optional)
 
-VRF result is delivered.
+Players may burn duplicates:
 
-Step 4 — Contract mints card NFTs
+5x Common → 1 Rare
 
-Cards distributed to owner.
+3x Rare → 1 Epic
 
-Step 5 — Client reads event logs
+2x Epic → 1 Legendary
 
-Card art animates into view.
+Uses ERC-1155 burn/mint.
 
-Step 6 — Cards populate player’s collection
+9. Marketplace
 
-Client syncs with blockchain indexer.
+Supports:
 
-🜈 8. Integration with the Match Engine
+NFT trading
 
-NFT ownership does not affect gameplay balance.
+filters: rarity, Realm, set, price
 
-Rules:
+optional creator royalty (2.5–5%)
 
-NFTs represent collectibles
+10. Authenticity Guarantees
 
-Gameplay uses server-side card database
+Each NFT:
 
-Rarity does not imply power creep
+uses VRF
 
-Cosmetic alt-frames may apply to NFT skins
+uses IPFS hashing
 
-Players can:
+is immutable
 
-use NFT cosmetics inside the match
+is cross-validated with internal DB
 
-show off prestige card frames
+cannot be duplicated
 
-apply Legendary/Seat FX animations
-
-NO pay-to-win mechanics.
-
-🜉 9. Crafting & Burning System (Optional)
-
-To reduce supply inflation:
-
-Players may burn duplicate NFTs to craft higher tiers.
-
-Example recipe:
-
-5 Commons → 1 Rare
-
-3 Rares → 1 Epic
-
-2 Epics → 1 Legendary
-
-Uses ERC-1155 burn/mint functionality.
-
-Crafting UI appears in the collection section.
-
-🜊 10. Marketplace Considerations
-
-Council of 1000 supports:
-
-peer-to-peer sales
-
-auction house
-
-listing filters: rarity, set, Realm, price
-
-optional royalty structure
-
-Recommended: 2.5–5% creator royalty for ecosystem sustainability.
-
-🜋 11. Anti-Fraud & Authenticity Guarantees
-
-Every NFT is:
-
-VRF-generated
-
-timestamped
-
-immutable
-
-cross-validated with internal DB
-
-resistant to duplication
-
-verified by on-chain metadata
-
-Fraud scenarios prevented:
-
-fake pack claims
-
-manipulated randomness
-
-client-side spoofing
-
-duplicate minting
-
-🜌 12. Data Storage
-
-Images, 3D variants, animated frames stored on:
-
-IPFS
-
-Arweave
-
-Metadata pinning services recommended.
-
-On-chain storage limited to:
-
-hashes
-
-URLs
-
-rarity
-
-VRF results
-
-Token IDs
-
-🜍 13. Pack Types
+11. Pack Types
 Standard Pack
 
-core rarity distribution
-
-best for new players
+Baseline distribution.
 
 Premium Pack
 
-increased Epic+ chance
+Better Epic/Legendary odds.
 
-better odds for Legendary
+Seat Pack (Event)
 
-Seat Pack (Event Only)
-
-1 guaranteed Legendary
-
-<1% chance for Seat Card
+<1% chance for Seat Cards.
 
 Realm Pack
 
-themed sets
+Dominion-only, Veil-only, etc.
 
-Dominion-only pulls, etc.
+12. Summary
 
-🜎 14. Security Considerations
+The NFT Pack System makes Council of 1000:
 
-Packs cannot be “opened twice”
+collectible
 
-VRF cannot be skipped
+fair
 
-NFTs cannot be reminted
+verifiable
 
-Pack metadata cannot be altered after mint
+scalable
 
-Seat Cards minted only by governance-authorized contract
+Shido-native
 
-Internal audits recommended before launch.
+resistant to manipulation
 
-🜏 Summary
+attractive to collectors
 
-The NFT Pack System enables a blockchain-enhanced TCG where:
-
-players own their cards
-
-randomness is fair and verifiable
-
-packs have intrinsic market value
-
-Seat Cards remain ultra-rare prestige items
-
-gameplay integrity stays fully server-authoritative
-
-Shido integration provides low-fee, high-speed minting
-
-the ecosystem can sustainably grow
-
-Council of 1000 becomes not just a TCG —
-but a collectible universe with provable scarcity and real ownership.
+This bridges the TCG with real digital ownership.
