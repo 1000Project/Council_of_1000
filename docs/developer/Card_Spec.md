@@ -1,232 +1,228 @@
-# The Champions of the Thousandfold Realm  
-_The 1000 Figures Who Shape Reality_
+# The Cards of the Thousandfold Realm  
+_The Fundamental Tools Through Which Champions Shape Reality_
 
-Champions are the foundation of the Council of 1000, the Realms, and the structure of the entire Thousandfold Realm.  
-They are not rulers by bloodline, nor warriors by trade — they are **philosophical powers** whose conviction reshapes existence.
+Cards are the mechanical manifestation of metaphysical forces within the Thousandfold Realm.  
+Where Champions express philosophy through conviction, cards express philosophy through action.
 
-A Champion is defined not by origin, but by **belief powerful enough to alter reality**.
+Every card represents a moment of power, a fragment of Realm-energy, an expression of identity, or a tactical decision that reshapes the state of play.
 
-This document provides the public-facing explanation of what Champions are, how they function within the lore, and how they translate into gameplay mechanics.
-
----
-
-# 🜂 What Is a Champion?
-
-A **Champion** is an individual whose mastery of a philosophy has reached such magnitude that it manifests as metaphysical power. Their worldview becomes a weapon, a shield, a force of nature.
-
-Champions:
-
-- shape the landscape of their Realm  
-- inspire followers, guilds, or nations  
-- manifest abilities tied to their philosophy  
-- influence political and metaphysical events  
-- hold or contest Seats of authority within the Council  
-
-Champions represent the purest expression of what their Realm stands for.
+This document provides the public-facing explanation of the card system: card types, role, structure, and how they interact with the larger rules of the Council of 1000 TCG.
 
 ---
 
-# 🜁 Why There Are 1000 Champions
+# 🜂 What a Card Represents
 
-The Master Lore establishes that over countless cycles of the Thousandfold Realm, a total of **one thousand beings** have ascended to the level of Champion.
+A card is not an object.  
+It is a distilled expression of a Champion’s will.
+
+Cards may represent:
+
+- Units brought into being  
+- Actions taken by the Champion  
+- Relics of philosophical or historical significance  
+- Manifestations of Realm-energy  
+- Council decrees or Seat-based authority  
+
+Each card serves as a tactical tool in the ongoing philosophical struggle of the Thousandfold Realm.
+
+---
+
+# 🜁 Card Types
+
+There are five primary card types used in the game:
+
+- **Champions** — the player’s identity and anchor  
+- **Units** — manifestations of force, influence, or ideology  
+- **Actions** — single events, decisions, or bursts of power  
+- **Relics** — persistent effects, artifacts, philosophies, or constructs  
+- **Seats** — metaphysical domains tied to the Council of 1000 (introduced sparingly)
+
+Each type interacts with the game in unique ways, reinforcing the philosophical identity of the Realms.
+
+---
+
+# 🜃 Champions as the Core of the Deck
+
+A deck begins with a single Champion.
+
+Champions determine:
+
+- Realm alignment  
+- Ability kit  
+- Passive and active effects  
+- Influence progression  
+- Available card pools  
+- Playstyle identity  
+
+Every card in the deck revolves around the Champion’s nature.  
+They are the anchor of the player’s strategy and the metaphysical being through which the deck expresses itself.
+
+---
+
+# 🜄 Units
+
+Units are extensions of a Champion’s will — followers, constructs, manifestations, or ideological avatars.
+
+Units may represent:
+
+- Dominion soldiers  
+- Solace guardians  
+- Veil agents  
+- Genesis creations  
+- Ruin abominations  
+- Ascendance disciples  
+- Paradox anomalies  
+
+Units fight, defend, interact with lanes, and apply continuous pressure on the opponent.
+
+---
+
+# 🜅 Actions
+
+Actions represent single bursts of activity, decisions, or shifts in reality.
+
+They may depict:
+
+- Tactical strikes  
+- Defensive barriers  
+- Manipulation of fate  
+- Realm-specific metaphysical events  
+- Philosophical breakthroughs  
+
+Actions are instant, ephemeral, and powerful.  
+They shape the tempo and direction of play.
+
+---
+
+# 🜆 Relics
+
+Relics are long-lasting influences on the battlefield.
+
+They may be:
+
+- Ideological monuments  
+- Ancient tools  
+- Philosophical constructs  
+- Living artifacts  
+- Persistent enchantments of Realm-energy  
+
+Relics reshape the field over time, enabling ongoing advantages or unique strategies.
+
+---
+
+# 🜇 Seats
+
+Seats are metaphysical domains tied directly to the Council of 1000.
 
 They are:
 
-- the greatest thinkers  
-- the greatest warriors  
-- the greatest manipulators  
-- the greatest creators  
-- the greatest destroyers  
+- ideological domains,  
+- fragments of authority,  
+- embodiments of a principle,  
+- potential sources of political or metaphysical influence.
 
-Each of the 1000 embodies:
-
-- a worldview  
-- a discipline  
-- a metaphysical law  
-- a unique interpretation of their Realm’s truth  
-
-Together, the 1000 form the **Council** and define the balance of existence.
-
-The number **1000** is both literal (canon) and symbolic (the Thousandfold nature of reality).
+Seats are introduced sparingly due to their narrative weight and mechanical impact.  
+They represent the deepest structures of power within the Thousandfold Realm.
 
 ---
 
-# 🜄 Champion Alignment with Realms
+# 🜂 Card Anatomy
 
-Champions are aligned to one — and only one — Realm.
+Every card expresses several key components:
 
-A Champion’s:
+- **Name** — identity and flavor  
+- **Realm** — philosophical alignment  
+- **Rarity** — narrative weight  
+- **Cost** — influence required to manifest the card  
+- **Type Line** — Champion, Unit, Action, Relic, or Seat  
+- **Rules Text** — gameplay instructions  
+- **Traits & Keywords** — additional mechanical identity  
+- **Flavor Text** (optional) — lore expression  
+- **Art** — visual representation of the metaphysical form  
 
-- abilities  
-- mechanics  
-- narrative role  
-- faction identity  
-- card pool access  
-
-…all flow from their **Realm alignment**.
-
-### A Dominion Champion commands force and dominance.  
-### A Veil Champion manipulates knowledge and perception.  
-### A Paradox Champion twists probability and fate.  
-
-Realm alignment is a lifelong binding — a metaphysical truth of their being.
-
-Champions do not change Realms.  
-Champions **define** their Realm.
+These elements combine to provide both gameplay clarity and narrative immersion.
 
 ---
 
-# 🜃 Seats of the Council
+# 🜁 Realm Identity in Cards
 
-The Council consists of **1000 Seats**, each occupied by one Champion.  
-A Seat is not a throne — it is a **metaphysical locus of authority** tied to a philosophy.
+Each Realm has a mechanical and thematic identity expressed through its cards.
 
-Holding a Seat grants:
+Dominion cards emphasize pressure and control.  
+Solace cards emphasize protection and endurance.  
+Veil cards emphasize manipulation and information.  
+Genesis cards emphasize creation and growth.  
+Ruin cards emphasize decay and inevitability.  
+Ascendance cards emphasize mastery and refinement.  
+Paradox cards emphasize unpredictability and distortion.
 
-- prestige  
-- metaphysical influence  
-- voting power within the Council  
-- authority over specific ideological domains  
-- the ability to reshape their Realm’s boundaries  
-
-But Seats can be:
-
-- challenged  
-- overthrown  
-- relinquished  
-- destroyed  
-- replaced  
-
-This creates the ongoing struggle at the heart of the Thousandfold Realm.
+Realm identity ensures that every deck expresses a coherent philosophical playstyle.
 
 ---
 
-# 🜁 Ascension
+# 🜃 Deck Construction
 
-Not all Champions were born into power.  
-Most **ascended** — rising through discipline, mastery, trial, or revelation.
+A deck is built around a Champion and consists of:
 
-Ascension occurs when:
+- A fixed number of cards  
+- Cards aligned to the Champion’s Realm  
+- Neutral or Realm-compatible cards (when allowed)  
+- Unique cards if permitted by rarity rules  
 
-- a worldview becomes absolute within a practitioner  
-- a mastery becomes transcendent  
-- the Realm acknowledges their power  
-- the Council recognizes their existence  
-
-Once ascended, a Champion:
-
-- gains access to metaphysical resonance (their Realm’s power)  
-- manifests unique abilities  
-- becomes able to challenge for a Seat  
-
-Ascension is rare, dangerous, and world-altering.
+Deck construction is where gameplay philosophy begins:  
+the player chooses how their Champion’s worldview will express itself in tactical form.
 
 ---
 
-# 🜄 Fallen Champions
+# 🜄 How Cards Interact with Lanes
 
-Some Champions:
+Lanes are the structured metaphysical battlefield.  
+Units and Relics may occupy lanes, affecting combat and tactical positioning.
 
-- vanish  
-- die  
-- are consumed by their Realm  
-- fracture under Paradox  
-- dissolve in Ruin  
-- transcend beyond the Council  
-- are erased from memory  
+Actions may target specific lanes, multiple lanes, or bypass lanes entirely depending on Realm identity and card design.
 
-When a Champion falls, their Seat becomes:
-
-- open  
-- unstable  
-- contested  
-
-New ascendants rise to claim abandoned Seats, continuing the eternal cycle.
+The lane system adds spatial strategy to philosophical conflict.
 
 ---
 
-# 🜂 Champions in Gameplay
+# 🜅 Card Rarity and Narrative Weight
 
-In the TCG, **your deck is built around a Champion**.
+Rarity is not a measure of raw power. It signifies:
 
-A Champion card represents:
-
-- your identity  
-- your playstyle  
-- your Realm alignment  
-- your core ability kit  
-- your special passive  
-- your unique deck-building rules  
-
-Players choose a Champion first — the rest of the deck follows.
-
-### Champions shape how you win the game.
-
-Champions define:
-
-- starting parameters  
-- available card pools  
-- Realm affinity mechanics  
-- unique triggers and abilities  
-- alternate win conditions  
-
-This mirrors their role in the lore:  
-Champions shape the reality around them.
-
----
-
-# 🜁 Champion Rarity & Lore
-
-Champions vary in rarity not by power, but by:
-
-- narrative prominence  
+- narrative importance  
 - metaphysical uniqueness  
-- the strength of their philosophical resonance  
+- storytelling function  
+- connection to canonical lore  
 
-In TCG terms:
-
-- **Common Champions** represent minor ascendants  
-- **Rare Champions** represent established academics or generals  
-- **Epic Champions** represent major Realm figures  
-- **Legendary Champions** represent canonical named Champions  
-- **Mythic / Ascendant Champions** represent seats of enormous influence  
-
-Canonical named Champions are introduced sparingly in expansions to maintain narrative weight.
+Common cards depict everyday expressions of Realm-energy.  
+Mythic or Ascendant cards represent world-shaping forces or canonical figures tied directly to the Council.
 
 ---
 
-# 🜂 Player Identity vs. Canonical Champions
+# 🜆 Cards and the Narrative
 
-The TCG supports **two layers** of Champion identity:
+Cards are also storytelling tools.
 
-## **1. Canonical Champions**
-These are lore-defined figures from the Master Bible.  
-They appear in expansions as rare, powerful cards tied to the canonical story.
+Each expansion introduces:
 
-## **2. Player Champions**
-These represent emergent or rising figures from the Realms.  
-They allow players to:
+- new Units representing evolving factions  
+- new Actions reflecting shifting political or Realm tensions  
+- Relics tied to legendary moments or artifacts  
+- occasional canonical Champions or Seats  
 
-- embrace a playstyle  
-- embody a Realm philosophy  
-- participate in the ascension struggle  
-
-This preserves lore integrity **and** gameplay flexibility.
+The card pool grows as the Thousandfold Realm evolves.
 
 ---
 
 # 🜄 Summary
 
-The Champions are the central force of the Thousandfold Realm.  
-They are the embodiment of:
+Cards are the tactical, narrative, and philosophical tools through which Champions express themselves.
 
-- philosophy  
-- power  
-- conflict  
-- ascension  
-- identity  
+They define:
 
-They shape the Realms, anchor the Council, and define the core of gameplay.
+- the strategy of the deck  
+- the nature of combat  
+- the evolution of the meta  
+- the unfolding story of the Thousandfold Realm  
 
-The Council of 1000 is not just a political body —  
-it is the battlefield where the greatest ideologies ever conceived clash through the wills of Champions.
+Every card is a fragment of belief made manifest, shaping the battlefield and the fate of the Council of 1000.
