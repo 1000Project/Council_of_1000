@@ -1,181 +1,205 @@
 # World Overview  
-_The Thousandfold Realm & The Rise of the Council of 1000_
+_The Thousandfold Realm and the Structure of Its Existence_
 
-The world of **The Thousandfold Realm** is not a traditional plane. It is an ever-shifting metaphysical continuum born from conflict, philosophy, and the wills of those powerful enough to shape reality itself.  
-Here, thought is substance. Belief is law. Power is identity.
+The Thousandfold Realm is a metaphysical world shaped not by geography or physical law, but by belief, philosophy, and the will of those powerful enough to influence reality. Its boundaries shift, its landscapes reflect ideology, and its history is defined by the rise and fall of the 1000 Champions whose convictions reshape existence.
 
-This is the origin point of the **Council of 1000** — an assembly of legendary Champions whose philosophies define the Realms and whose conflicts determine the fate of existence.
-
----
-
-# 🜂 The Thousandfold Realm
-
-The Thousandfold Realm is a world shaped not by geography, but by **ideology**.  
-It is divided along metaphysical, philosophical lines known as **Realms** — vast domains formed by the dominant worldview of the Champions who ascended within them.
-
-Where in ordinary worlds, borders are drawn on land, here they are drawn in **thought**.
-
-The Realm changes based on:
-
-- who holds power  
-- what beliefs ascend  
-- which Champions rise or fall  
-- the shifting balance between creation, decay, knowledge, order, and chaos  
-
-The Realm is alive.  
-It remembers.  
-It reacts.
-
-Because of this, the Thousandfold Realm is both **ancient** and **constantly new**, endlessly reshaping itself around the will of the powerful.
+This document provides a foundational understanding of the world in which the Council of 1000 operates, the Realms that compose it, and the forces that shape its evolution.
 
 ---
 
-# 🜁 The Shaping
+# 🜂 Nature of the Thousandfold Realm
 
-The defining historical event of the Realm is known simply as **The Shaping**.
+The Thousandfold Realm is a layered, multifaceted plane of existence where thought and reality intertwine. Physical geography exists, but it is subordinate to metaphysical truth.
 
-It was not a war, not a ritual, not even a moment — but a **transition** where metaphysical ideas coalesced into physical form. During the Shaping:
+Reality is influenced by:
 
-- Pure philosophies manifested into the Seven Realms  
-- Champions awakened with powers tied to these philosophies  
-- Reality reorganized itself around belief, will, and conviction  
-- The Realm adopted its “Thousandfold” form, a lattice of layered realities and ideological territories  
+- belief  
+- ideology  
+- philosophical resonance  
+- the actions of Champions  
+- the balance between the Seven Realms  
 
-After the Shaping, the world became a place where:
-
-- Champions could alter matter through conviction  
-- Realms could expand or shrink based on dominance  
-- Conflicts of ideology became literal conflicts of power  
-
-The Shaping forged the **cosmic rules** that now govern all play.
+The world is not static. It shifts, collapses, reforms, and evolves as the influence of its Champions rises and falls.
 
 ---
 
-# 🜄 The Emergence of the Champions
+# 🜁 The Seven Great Realms
 
-From within each Realm rose individuals whose mastery of their philosophy transcended ordinary limits. These figures:
+The Thousandfold Realm is divided into seven ideological territories known as the Realms. These Realms are not nations or continents, but expressions of philosophy made tangible.
 
-- bent the Realm to their will  
-- influenced the structure of reality  
-- gathered followers  
-- shaped civilizations and narratives  
-- became living archetypes of their philosophy  
+The Seven Realms are:
 
-They came to be known as **Champions**.
+- **Dominion** — strength, order, conquest  
+- **Solace** — preservation, harmony, protection  
+- **Veil** — secrecy, strategy, unseen influence  
+- **Genesis** — creation, invention, life  
+- **Ruin** — decay, entropy, inevitability  
+- **Ascendance** — mastery, refinement, transcendence  
+- **Paradox** — instability, probability, contradiction  
 
-A Champion is not defined by birth, race, or class.  
-A Champion is defined by **belief powerful enough to reshape reality**.
+Each Realm has:
 
-Over generations and cycles, **one thousand** such beings rose to prominence — each representing a philosophical discipline or interpretation of their Realm’s identity.
+- its own metaphysical laws  
+- its own terrain shaped by ideology  
+- its own political and philosophical movements  
+- Champions who embody its truth  
 
-These one thousand became the pillars of the world’s structure.
-
----
-
-# 🜂 Formation of the Council of 1000
-
-As the power of Champions grew, their conflicts grew with them.  
-Without order, the Thousandfold Realm risked collapsing back into formless chaos.
-
-Thus emerged the **Council of 1000** — an accord among the greatest Champions, establishing:
-
-- boundaries between Realms  
-- laws governing metaphysical conflict  
-- rituals of challenge and ascension  
-- recognition of seats of power  
-- mechanisms for resolving ideological warfare without destroying the world  
-
-The Council is not a government.  
-It is not a peacekeeping force.  
-It is an **agreement** — the only thing preventing the Realms from consuming one another completely.
-
-Every Champion occupies (or seeks) a **Seat**, representing their philosophical stance within the Council. Seats confer:
-
-- prestige  
-- influence  
-- metaphysical authority  
-- the ability to shape policy or reality within the Council’s domain  
-
-But Seats can be challenged, conquered, stolen, or overturned through:
-
-- duels  
-- Realm conflicts  
-- political maneuvering  
-- ascension trials  
-
-Thus the Council itself is a living battleground.
+The Realms coexist but constantly contend for influence.
 
 ---
 
-# 🜃 The Realms (High-Level)
+# 🜃 Geography Shaped by Philosophy
 
-The Thousandfold Realm is divided into **seven ideological Realms**, each shaped by a dominant worldview and the Champions who embody it.
+The landscapes of the Thousandfold Realm reflect the collective convictions of its inhabitants.
 
-- **Realm of Dominion** — strength, will, conquest  
-- **Realm of Solace** — protection, restoration, harmony  
-- **Realm of the Veil** — secrets, deception, hidden truth  
-- **Realm of Genesis** — creation, innovation, life  
-- **Realm of Ruin** — entropy, decay, inevitability  
-- **Realm of Ascendance** — mastery, discipline, enlightenment  
-- **Realm of Paradox** — chaos, probability, unstable truths  
+Examples include:
 
-Each Realm influences:
+- Dominion’s iron bastions and militaristic spires  
+- Solace’s crystalline sanctuaries and protected groves  
+- Veil’s labyrinthine libraries and shifting shadow-cities  
+- Genesis’s living forests, constructs, and arcane machinery  
+- Ruin’s decaying wastelands and collapsing citadels  
+- Ascendance’s elevated monastic strongholds and disciplined arenas  
+- Paradox’s impossible geometries, floating shards, and looping horizons  
 
-- Champion abilities  
-- Deck construction  
-- Faction identity  
-- Expansion themes  
-- Political dynamics in the Council  
-
-See `/docs/lore/Realms.md` for full details.
+These are not fixed regions. Their boundaries expand or contract as the influence of their Champions waxes or wanes.
 
 ---
 
-# 🜁 The Seat Wars & Power Struggle
+# 🜄 The Convergence Threshold
 
-The Council is eternally unstable.
+At the center of the Thousandfold Realm lies the Convergence Threshold — the metaphysical crossroads where the Seven Realms overlap.
 
-Champions rise and fall.  
-Realms expand and contract.  
-Seats shift in allegiance or are seized outright.
+The Threshold is:
 
-Whenever the balance tips too far:
+- the meeting place of all ideological forces  
+- the seat of the Council of 1000  
+- a neutral yet volatile territory  
+- a battleground of influence  
 
-- new Champions ascend  
-- old Champions fall  
-- Realms erupt into conflict  
-- metaphysical laws are revised  
-- the Council is forced to renegotiate the boundaries of existence  
+The Threshold exists simultaneously as:
 
-These cycles are the narrative engine behind expansions.
+- a physical structure  
+- a conceptual meeting of philosophies  
+- a nexus where shifts in power manifest immediately  
 
----
-
-# 🜄 The World in the Era of the TCG
-
-The current era — the one in which the game takes place — is defined by:
-
-- contested Seats  
-- resurging ancient Champions  
-- untested ascendants challenging powerful incumbents  
-- emerging Realms shifting the metaphysical landscape  
-- hidden alliances forming beneath the Veil  
-- the Paradox Realm destabilizing reality threads  
-- Dominion and Solace fighting proxy wars  
-- the Council fracturing beneath ideological strain  
-
-Players enter this era **as aspiring Champions**, aligning with Realms, honing mastery, and fighting for Seats of power.
-
-Every match is canon.  
-Every victory shifts a thread of fate.  
-Every ascent echoes into the Thousandfold Realm.
+It is the heart of political and metaphysical conflict.
 
 ---
 
-# 🜂 Summary
+# 🜅 The Council’s Influence on the World
 
-The Thousandfold Realm is a metaphysical world shaped entirely by belief, conflict, and mastery.  
-At its center sits the **Council of 1000**, a battleground of philosophies represented by the greatest Champions in existence.
+The Council of 1000 does more than govern — it stabilizes the fabric of reality.
 
-This document provides the public overview.  
-For deeper lore, secrets, metaphysics, and historical nuance, refer to the internal lore bibles maintained by the creator.
+Council decisions can:
+
+- expand or contract Realm borders  
+- alter metaphysical laws  
+- shift the balance of power  
+- cause planar events or fissures  
+- change how Champions manifest influence  
+
+When the Council is unified, the Thousandfold Realm becomes stable.  
+When the Council is fractured, the world enters periods of upheaval.
+
+---
+
+# 🜆 Ages and Cycles
+
+The world progresses through Ages — large-scale epochs characterized by major philosophical shifts.
+
+An Age ends when:
+
+- a significant number of Seats fall  
+- a Realm gains overwhelming influence  
+- a metaphysical catastrophe reshapes reality  
+- a new class of Champions ascends  
+- Paradox destabilizes the structure of existence  
+
+Each new Age changes the landscape, politics, and power dynamics of the entire Realm.
+
+---
+
+# 🜇 Factions and Cultures
+
+Within each Realm, numerous factions exist:
+
+- military orders  
+- monastic schools  
+- research guilds  
+- shadow networks  
+- creation enclaves  
+- ruin cults  
+- paradox cabals  
+
+These groups influence the rise of Champions and shape the stories of expansions.
+
+---
+
+# 🜈 Magic, Technology, and Metaphysics
+
+The Thousandfold Realm does not separate magic from science.  
+Both are expressions of philosophical understanding.
+
+- Genesis blends arcane invention with bio-engineering  
+- Veil uses metaphysical information systems  
+- Ascendance refines the body and mind into disciplined perfection  
+- Dominion wields structured force and martial doctrine  
+- Paradox manipulates probability and temporal distortion  
+
+Each Realm develops its own approach to power.
+
+---
+
+# 🜉 Historical Tensions
+
+The Thousandfold Realm has been shaped by countless conflicts:
+
+- Dominion’s campaigns for order  
+- Veil’s silent interventions  
+- Solace’s attempts to preserve peace  
+- Genesis’s expansion of life and creation  
+- Ruin’s periodic collapses  
+- Ascendance’s philosophical revolutions  
+- Paradox’s destabilizing events  
+
+These tensions form the backbone of the game’s story arcs.
+
+---
+
+# 🜊 The Role of Champions
+
+Champions are the central figures of the Thousandfold Realm’s history.  
+Their ascent marks shifts in power and philosophy.
+
+Champions:
+
+- define the boundaries of Realms  
+- challenge or stabilize Council Seats  
+- trigger major events  
+- shape the political landscape  
+- influence the world’s metaphysical structure  
+
+The 1000 Champions collectively determine the fate of the Realm.
+
+---
+
+# 🜋 The Player’s Place in the World
+
+Players take on the role of a Champion — canonical or emerging — whose decisions shape:
+
+- combat  
+- strategy  
+- ideological expression  
+- influence within the Council  
+
+The game expresses the philosophical struggle of the Thousandfold Realm through tactical, competitive play.
+
+---
+
+# 🜌 Summary
+
+The world of the Thousandfold Realm is a metaphysical, ideological, and ever-shifting plane shaped by belief, conflict, and the will of its Champions.  
+Its Realms, factions, history, and power structures form the narrative foundation for the Council of 1000 TCG.
+
+This World Overview provides a high-level understanding of the forces that define the setting and prepare the stage for deeper lore exploration.
