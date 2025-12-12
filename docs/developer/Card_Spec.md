@@ -1,270 +1,232 @@
-# Card Specification  
-Standard Data Format for Council of 1000 Cards
+# The Champions of the Thousandfold Realm  
+_The 1000 Figures Who Shape Reality_
 
-This document defines the canonical data structure for cards in the Council of 1000 TCG.
+Champions are the foundation of the Council of 1000, the Realms, and the structure of the entire Thousandfold Realm.  
+They are not rulers by bloodline, nor warriors by trade — they are **philosophical powers** whose conviction reshapes existence.
 
-It is intended for:
+A Champion is defined not by origin, but by **belief powerful enough to alter reality**.
 
-- engine developers
-- tooling / editor developers
-- data entry / content teams
-- future blockchain integration
+This document provides the public-facing explanation of what Champions are, how they function within the lore, and how they translate into gameplay mechanics.
 
-This specification is format-agnostic. Examples use JSON.
+---
 
-------------------------------------------------------------
-CORE CONCEPTS
-------------------------------------------------------------
+# 🜂 What Is a Champion?
 
-Every card defines:
+A **Champion** is an individual whose mastery of a philosophy has reached such magnitude that it manifests as metaphysical power. Their worldview becomes a weapon, a shield, a force of nature.
 
-- Identity (id, name, type, realm)
-- Playability (cost, requirements)
-- Stats (for Units and Champions)
-- Effects (rules text, triggers, targets)
-- Rarity / Set info
+Champions:
 
-------------------------------------------------------------
-BASE CARD SCHEMA
-------------------------------------------------------------
+- shape the landscape of their Realm  
+- inspire followers, guilds, or nations  
+- manifest abilities tied to their philosophy  
+- influence political and metaphysical events  
+- hold or contest Seats of authority within the Council  
 
-All cards share:
+Champions represent the purest expression of what their Realm stands for.
 
-{
-  "id": "string",
-  "name": "string",
-  "card_type": "Champion | Unit | Action | Relic | Seat",
-  "realm": "Dominion | Solace | Veil | Genesis | Ruin | Ascendance | Paradox",
-  "rarity": "Common | Rare | Epic | Legendary | Mythic",
-  "set_code": "string",
-  "collector_number": "string",
-  "influence_cost": 0,
-  "traits": [],
-  "tags": [],
-  "rules_text": "string",
-  "flavor_text": "string",
-  "art_id": "string",
-  "is_legendary": false,
-  "is_canonical": false,
-  "dev_notes": ""
-}
+---
 
-------------------------------------------------------------
-CHAMPION SCHEMA
-------------------------------------------------------------
+# 🜁 Why There Are 1000 Champions
 
-{
-  "card_type": "Champion",
-  "resolve": 30,
-  "starting_influence": 1,
-  "max_influence": 10,
+The Master Lore establishes that over countless cycles of the Thousandfold Realm, a total of **one thousand beings** have ascended to the level of Champion.
 
-  "passive_ability": {
-    "name": "string",
-    "text": "string",
-    "effects": []
-  },
+They are:
 
-  "active_abilities": [
-    {
-      "id": "string",
-      "name": "string",
-      "influence_cost": 2,
-      "cooldown": 0,
-      "timing": "MainPhase | AnyTime | CombatOnly",
-      "effects": []
-    }
-  ],
+- the greatest thinkers  
+- the greatest warriors  
+- the greatest manipulators  
+- the greatest creators  
+- the greatest destroyers  
 
-  "ultimate_ability": {
-    "name": "string",
-    "condition": "string",
-    "effects": []
-  }
-}
+Each of the 1000 embodies:
 
-------------------------------------------------------------
-UNIT SCHEMA
-------------------------------------------------------------
+- a worldview  
+- a discipline  
+- a metaphysical law  
+- a unique interpretation of their Realm’s truth  
 
-{
-  "card_type": "Unit",
-  "power": 3,
-  "health": 3,
-  "speed": 1,
-  "lane_restrictions": [],
-  "summon_effects": [],
-  "death_effects": [],
-  "keywords": [],
-  "abilities": []
-}
+Together, the 1000 form the **Council** and define the balance of existence.
 
-------------------------------------------------------------
-ACTION SCHEMA
-------------------------------------------------------------
+The number **1000** is both literal (canon) and symbolic (the Thousandfold nature of reality).
 
-{
-  "card_type": "Action",
-  "speed": "Fast | Slow | Reaction",
-  "targets": [],
-  "effects": []
-}
+---
 
-------------------------------------------------------------
-RELIC SCHEMA
-------------------------------------------------------------
+# 🜄 Champion Alignment with Realms
 
-{
-  "card_type": "Relic",
-  "durability": null,
-  "slot": "Global | Lane | Champion",
-  "ongoing_effects": [],
-  "triggered_effects": [],
-  "destruction_condition": "string"
-}
+Champions are aligned to one — and only one — Realm.
 
-------------------------------------------------------------
-SEAT SCHEMA (OPTIONAL)
-------------------------------------------------------------
+A Champion’s:
 
-{
-  "card_type": "Seat",
-  "seat_rank": "Minor | Major | High",
-  "council_domain": "string",
-  "attachment_rules": "ChampionOnly | RealmOnly | Global",
-  "ongoing_effects": [],
-  "council_edicts": []
-}
+- abilities  
+- mechanics  
+- narrative role  
+- faction identity  
+- card pool access  
 
-------------------------------------------------------------
-EFFECT STRUCTURE
-------------------------------------------------------------
+…all flow from their **Realm alignment**.
 
-Effects are atomic engine operations.
+### A Dominion Champion commands force and dominance.  
+### A Veil Champion manipulates knowledge and perception.  
+### A Paradox Champion twists probability and fate.  
 
-{
-  "effect_type": "Damage | Heal | Draw | Discard | Buff | Debuff | Spawn | Move | ModifyResource | Custom",
-  "magnitude": 3,
-  "targets": [],
-  "duration": "Instant | EndOfTurn | Permanent | Custom",
-  "conditions": [],
-  "metadata": {}
-}
+Realm alignment is a lifelong binding — a metaphysical truth of their being.
 
-------------------------------------------------------------
-TARGET SPECIFICATION
-------------------------------------------------------------
+Champions do not change Realms.  
+Champions **define** their Realm.
 
-{
-  "side": "Self | Opponent | Any",
-  "card_type": "Champion | Unit | Relic | Seat | Any",
-  "location": "Hand | Deck | Battlefield | Discard | Exile | Any",
-  "lane": "Any | Left | Center | Right",
-  "selection": "Single | Multiple | All | Random",
-  "constraints": []
-}
+---
 
-------------------------------------------------------------
-CONDITION SPECIFICATION
-------------------------------------------------------------
+# 🜃 Seats of the Council
 
-{
-  "condition_type": "Turn | Phase | State | Resource | Realm | Custom",
-  "operator": "== | != | > | < | >= | <=",
-  "left": "string",
-  "right": "number | string | boolean"
-}
+The Council consists of **1000 Seats**, each occupied by one Champion.  
+A Seat is not a throne — it is a **metaphysical locus of authority** tied to a philosophy.
 
-------------------------------------------------------------
-KEYWORDS (INTERNAL)
-------------------------------------------------------------
+Holding a Seat grants:
 
-"keywords": [
-  "Shield",
-  "Overrun",
-  "Wither"
-]
+- prestige  
+- metaphysical influence  
+- voting power within the Council  
+- authority over specific ideological domains  
+- the ability to reshape their Realm’s boundaries  
 
-Keywords map to internal rules:
+But Seats can be:
 
-{
-  "id": "Wither",
-  "rules_text": "Damage dealt by this Unit reduces Health permanently.",
-  "effects_template": [
-    {
-      "effect_type": "Damage",
-      "metadata": {
-        "damage_type": "Permanent"
-      }
-    }
-  ]
-}
+- challenged  
+- overthrown  
+- relinquished  
+- destroyed  
+- replaced  
 
-------------------------------------------------------------
-EXAMPLE CARDS
-------------------------------------------------------------
+This creates the ongoing struggle at the heart of the Thousandfold Realm.
 
-UNIT EXAMPLE:
+---
 
-{
-  "id": "CORE-021",
-  "name": "Ironfront Captain",
-  "card_type": "Unit",
-  "realm": "Dominion",
-  "rarity": "Common",
-  "set_code": "CORE",
-  "collector_number": "021",
-  "influence_cost": 2,
-  "traits": ["Soldier", "Frontline"],
-  "tags": ["Aggro", "EarlyGame"],
-  "rules_text": "When Ironfront Captain attacks, it gains +1 Power until end of turn.",
-  "flavor_text": "Hold the line. Break theirs.",
-  "power": 2,
-  "health": 2,
-  "speed": 1
-}
+# 🜁 Ascension
 
-ACTION EXAMPLE:
+Not all Champions were born into power.  
+Most **ascended** — rising through discipline, mastery, trial, or revelation.
 
-{
-  "id": "CORE-052",
-  "name": "Bulwark of Solace",
-  "card_type": "Action",
-  "realm": "Solace",
-  "rarity": "Rare",
-  "set_code": "CORE",
-  "collector_number": "052",
-  "influence_cost": 3,
-  "rules_text": "Give a friendly Unit Shield and restore 3 Resolve."
-}
+Ascension occurs when:
 
-CHAMPION EXAMPLE:
+- a worldview becomes absolute within a practitioner  
+- a mastery becomes transcendent  
+- the Realm acknowledges their power  
+- the Council recognizes their existence  
 
-{
-  "id": "CORE-001",
-  "name": "Kael, Architect of Rifts",
-  "card_type": "Champion",
-  "realm": "Paradox",
-  "rarity": "Mythic",
-  "resolve": 30,
-  "starting_influence": 1,
-  "max_influence": 10,
-  "passive_ability": {
-    "name": "Fractured Outcomes",
-    "text": "Your random-target Actions resolve twice."
-  }
-}
+Once ascended, a Champion:
 
-------------------------------------------------------------
-SUMMARY
-------------------------------------------------------------
+- gains access to metaphysical resonance (their Realm’s power)  
+- manifests unique abilities  
+- becomes able to challenge for a Seat  
 
-This specification defines:
+Ascension is rare, dangerous, and world-altering.
 
-- The base schema for all cards
-- Specialized schemas for Champions, Units, Actions, Relics, and Seats
-- The effect system
-- Targeting rules
-- Internal keyword structure
+---
 
-This is the reference for engine implementation, editors, validators, and on-chain metadata in the future.
+# 🜄 Fallen Champions
+
+Some Champions:
+
+- vanish  
+- die  
+- are consumed by their Realm  
+- fracture under Paradox  
+- dissolve in Ruin  
+- transcend beyond the Council  
+- are erased from memory  
+
+When a Champion falls, their Seat becomes:
+
+- open  
+- unstable  
+- contested  
+
+New ascendants rise to claim abandoned Seats, continuing the eternal cycle.
+
+---
+
+# 🜂 Champions in Gameplay
+
+In the TCG, **your deck is built around a Champion**.
+
+A Champion card represents:
+
+- your identity  
+- your playstyle  
+- your Realm alignment  
+- your core ability kit  
+- your special passive  
+- your unique deck-building rules  
+
+Players choose a Champion first — the rest of the deck follows.
+
+### Champions shape how you win the game.
+
+Champions define:
+
+- starting parameters  
+- available card pools  
+- Realm affinity mechanics  
+- unique triggers and abilities  
+- alternate win conditions  
+
+This mirrors their role in the lore:  
+Champions shape the reality around them.
+
+---
+
+# 🜁 Champion Rarity & Lore
+
+Champions vary in rarity not by power, but by:
+
+- narrative prominence  
+- metaphysical uniqueness  
+- the strength of their philosophical resonance  
+
+In TCG terms:
+
+- **Common Champions** represent minor ascendants  
+- **Rare Champions** represent established academics or generals  
+- **Epic Champions** represent major Realm figures  
+- **Legendary Champions** represent canonical named Champions  
+- **Mythic / Ascendant Champions** represent seats of enormous influence  
+
+Canonical named Champions are introduced sparingly in expansions to maintain narrative weight.
+
+---
+
+# 🜂 Player Identity vs. Canonical Champions
+
+The TCG supports **two layers** of Champion identity:
+
+## **1. Canonical Champions**
+These are lore-defined figures from the Master Bible.  
+They appear in expansions as rare, powerful cards tied to the canonical story.
+
+## **2. Player Champions**
+These represent emergent or rising figures from the Realms.  
+They allow players to:
+
+- embrace a playstyle  
+- embody a Realm philosophy  
+- participate in the ascension struggle  
+
+This preserves lore integrity **and** gameplay flexibility.
+
+---
+
+# 🜄 Summary
+
+The Champions are the central force of the Thousandfold Realm.  
+They are the embodiment of:
+
+- philosophy  
+- power  
+- conflict  
+- ascension  
+- identity  
+
+They shape the Realms, anchor the Council, and define the core of gameplay.
+
+The Council of 1000 is not just a political body —  
+it is the battlefield where the greatest ideologies ever conceived clash through the wills of Champions.
