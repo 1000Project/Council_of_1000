@@ -1,21 +1,22 @@
 # Realms of the Thousandfold Realm  
 _The Seven Great Philosophical Realms that Shape the Council of 1000_
 
-The world of **The Thousandfold Realm** is not divided by nations, elements, or geography—it is divided by **philosophy**. Each Realm is a vast ideological force, a metaphysical territory shaped by belief, discipline, and the Champions who rose to embody them.
+The world of **The Thousandfold Realm** is not divided by nations, elements, or geography—it is divided by **philosophy**.  
+Each Realm is a vast ideological force, a metaphysical territory shaped by belief, discipline, and the Champions who rose to embody them.
 
 A Realm is more than land.  
 A Realm is **a way of thinking**, given form.
 
 Champions align not by birth or blood, but by **conviction**. The Realms they swear to determine their abilities, aesthetics, strengths, weaknesses, and the card pools available to them.
 
-Below is the official, canon-aligned framework of the Realms as presented in the Executive Master Bible, the Studio Design Bible, and the Master Bible Condensed—refined for clarity, but unchanged in meaning.
+This document provides the official, canon-aligned framework of the Realms as presented in the Executive Master Bible, Studio Design Bible, and Master Bible Condensed—refined for clarity but unchanged in meaning.
 
 ---
 
 # 🜂 The Seven Realms
 
 Each Realm reflects a core philosophical axis of the Thousandfold Realm.  
-The interplay between these Realms defines both the **narrative conflict** and the **mechanical identity** of the Council of 1000 TCG.
+Their interplay defines both the **narrative conflict** and the **mechanical identity** of the Council of 1000 TCG.
 
 ---
 
@@ -91,34 +92,34 @@ Paradox embodies the truth that **reality is not fixed—it’s negotiated**.
 
 # 🜁 How Realms Shape Gameplay
 
-Realms influence:
+Realms influence every part of the game:
 
 ### **• Champion Abilities**  
-Every Champion’s signature abilities and passives are grounded in their Realm’s philosophy.
+A Champion’s signature abilities and passives are always rooted in their Realm’s philosophy.
 
 ### **• Card Pools**  
-Realms determine which card sets and mechanics a player can access.
+Realms determine which mechanics and sets a player can access.
 
 ### **• Playstyle Identity**  
-Each Realm rewards a unique approach to victory.
+Each Realm rewards a distinct approach to victory.
 
 ### **• Expansion Themes**  
-Major expansions introduce new Champions and cards tied to Realm evolutions or conflicts.
+Major expansions shift Realm tensions, introduce new Champions, and explore philosophical evolutions.
 
 ---
 
 # 🜂 Realm Conflicts within the Council
 
 The Council of 1000 is not a unified body.  
-It is a **strategic table shared by opposing philosophies**:
+It is a **strategic table shared by opposing ideologies**, each shaping the Thousandfold Realm:
 
 - Dominion clashes with Solace  
 - Veil manipulates both  
 - Genesis and Ruin represent creation vs decay  
-- Ascendance sits between order and evolution  
+- Ascendance stands between order and evolution  
 - Paradox destabilizes all of the above
 
-The Thousandfold Realm is defined by these tensions, and the game’s expansions follow the shifts in power, alliances, betrayals, and awakenings within the Council.
+The Realm system is the engine behind the world’s politics, alliances, betrayals, and awakenings. Expansions track these ideological shifts over time.
 
 ---
 
@@ -127,6 +128,5 @@ The Thousandfold Realm is defined by these tensions, and the game’s expansions
 The Seven Realms are the metaphysical, philosophical, and mechanical foundation of the Council of 1000.  
 They shape the world, the Champions, the deck-building rules, and the evolving story of the Thousandfold Realm.
 
-This file serves as the **reader-facing overview**.  
-The deeper, more exhaustive descriptions remain preserved in the internal lore bibles.
-
+This file serves as the **reader-facing Realm overview**.  
+The deeper, more exhaustive Realm analyses remain within the internal lore bibles.
