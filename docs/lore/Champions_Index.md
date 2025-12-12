@@ -230,4 +230,3 @@ They shape the Realms, anchor the Council, and define the core of gameplay.
 
 The Council of 1000 is not just a political body —  
 it is the battlefield where the greatest ideologies ever conceived clash through the wills of Champions.
-
