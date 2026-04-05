@@ -1,0 +1,50 @@
+[
+  {
+    "id": "order",
+    "name": "Order",
+    "motto": "Structure creates strength.",
+    "description": "Champions of Order believe discipline and unity forge unbreakable power.",
+    "theme": "gold",
+    "identity": "Control and stability"
+  },
+  {
+    "id": "entropy",
+    "name": "Entropy",
+    "motto": "Chaos reveals truth.",
+    "description": "Entropy champions embrace change, destruction, and the inevitable collapse of all systems.",
+    "theme": "crimson",
+    "identity": "Disruption and unpredictability"
+  },
+  {
+    "id": "knowledge",
+    "name": "Knowledge",
+    "motto": "Understanding is power.",
+    "description": "Knowledge champions seek mastery through learning, foresight, and calculated decisions.",
+    "theme": "blue",
+    "identity": "Strategy and foresight"
+  },
+  {
+    "id": "power",
+    "name": "Power",
+    "motto": "Strength decides destiny.",
+    "description": "Champions of Power believe domination is earned through superior force and presence.",
+    "theme": "red",
+    "identity": "Dominance and aggression"
+  },
+  {
+    "id": "void",
+    "name": "Void",
+    "motto": "Silence between worlds.",
+    "description": "Void champions draw strength from the unknown and the spaces between existence.",
+    "theme": "purple",
+    "identity": "Mystery and corruption"
+  },
+  {
+    "id": "balance",
+    "name": "Balance",
+    "motto": "All forces must equalize.",
+    "description": "Balance champions maintain harmony between creation and destruction.",
+    "theme": "emerald",
+    "identity": "Harmony and equilibrium"
+  }
+]
