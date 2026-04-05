@@ -3,6 +3,7 @@ import LandingScreen from "./components/LandingScreen"
 import FactionSelection from "./components/FactionSelection"
 import ChampionBuilder from "./components/ChampionBuilder"
 import AbilityDraft from "./components/AbilityDraft"
+import BattleArena from "./components/BattleArena"
 import {
   createNewPlayer,
   setFaction,
@@ -94,12 +95,13 @@ export default function App() {
 )}}
 
       {currentScreen === "battle" && (
-        <section>
-          <h2>Tutorial Battle</h2>
-          <p>Battle arena placeholder</p>
-          <button onClick={goToVictory}>Trigger Victory</button>
-        </section>
-      )}
+  <BattleArena
+    player={player}
+    onVictory={() => {
+      goToVictory()
+    }}
+  />
+)}
 
       {currentScreen === "victory" && (
         <section>
