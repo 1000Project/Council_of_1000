@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react"
-import abilitiesData from "../data/abilities.json"
 import type { Player } from "../systems/playerState"
 import type { Ability } from "../systems/draftLogic"
 import { getTutorialEnemy } from "../systems/tutorialBattle"
@@ -22,8 +21,6 @@ type Props = {
   player: Player
   onVictory: () => void
 }
-
-const allAbilities = abilitiesData as Ability[]
 
 export default function BattleArena({ player, onVictory }: Props) {
   const enemy = getTutorialEnemy()
@@ -67,7 +64,6 @@ export default function BattleArena({ player, onVictory }: Props) {
 
     updatedBattle = applyEnemyTurn(updatedBattle)
 
-    const enemyDamage = Math.max(0, updatedBattle.playerHealth - battle.playerHealth) * -1
     const enemyLog = buildEnemyActionLog(enemy.name, battle.playerHealth, updatedBattle.playerHealth)
     newLog.push(enemyLog)
 
