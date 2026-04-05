@@ -1,0 +1,71 @@
+{
+  "stats": [
+    {
+      "id": "power",
+      "name": "Power",
+      "description": "Increases ability damage.",
+      "min": 1,
+      "max": 10,
+      "prototypeWeight": "high"
+    },
+    {
+      "id": "vitality",
+      "name": "Vitality",
+      "description": "Increases total health.",
+      "min": 1,
+      "max": 10,
+      "prototypeWeight": "high"
+    },
+    {
+      "id": "speed",
+      "name": "Speed",
+      "description": "Determines turn priority (future use).",
+      "min": 1,
+      "max": 10,
+      "prototypeWeight": "low"
+    },
+    {
+      "id": "focus",
+      "name": "Focus",
+      "description": "Improves ability effectiveness (future use).",
+      "min": 1,
+      "max": 10,
+      "prototypeWeight": "low"
+    },
+    {
+      "id": "resilience",
+      "name": "Resilience",
+      "description": "Reduces incoming damage (future use).",
+      "min": 1,
+      "max": 10,
+      "prototypeWeight": "low"
+    }
+  ],
+
+  "championRules": {
+
+    "startingPoints": 20,
+
+    "minimumPerStat": 1,
+
+    "maximumPerStat": 10,
+
+    "allocationRules": [
+      "Player must spend all points",
+      "Stats cannot exceed maximum",
+      "Stats cannot go below minimum",
+      "Allocation is permanent after confirmation"
+    ]
+
+  },
+
+  "prototypeNotes": [
+
+    "Only Power and Vitality affect combat in MVP",
+
+    "Other stats exist for future expansion",
+
+    "Stats allow forward compatibility without redesign"
+
+  ]
+}
