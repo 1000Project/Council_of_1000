@@ -1,8 +1,14 @@
-import LandingScreen from "./components/LandingScreen"
 import { useState } from "react"
-import { createNewPlayer, type Player } from "./systems/playerState"
+import LandingScreen from "./components/LandingScreen"
 import FactionSelection from "./components/FactionSelection"
-import { setFaction } from "./systems/playerState"
+import ChampionBuilder from "./components/ChampionBuilder"
+import {
+  createNewPlayer,
+  setFaction,
+  setStats,
+  type Player,
+  type PlayerStats
+} from "./systems/playerState"
 
 type Screen =
   | "landing"
@@ -59,14 +65,16 @@ export default function App() {
   />
 
 )}
+{currentScreen === "builder" && (
+  <ChampionBuilder
+    onConfirm={(stats: PlayerStats) => {
+      const updatedPlayer = setStats(player, stats)
 
-      {currentScreen === "builder" && (
-        <section>
-          <h2>Champion Builder</h2>
-          <p>Champion builder placeholder</p>
-          <button onClick={goToDraft}>Continue to Ability Draft</button>
-        </section>
-      )}
+      setPlayer(updatedPlayer)
+      goToDraft()
+    }}
+  />
+)}
 
       {currentScreen === "draft" && (
         <section>
