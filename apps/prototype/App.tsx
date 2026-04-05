@@ -4,6 +4,7 @@ import FactionSelection from "./components/FactionSelection"
 import ChampionBuilder from "./components/ChampionBuilder"
 import AbilityDraft from "./components/AbilityDraft"
 import BattleArena from "./components/BattleArena"
+import VictoryScreen from "./components/VictoryScreen"
 import {
   createNewPlayer,
   setFaction,
@@ -104,12 +105,8 @@ export default function App() {
 )}
 
       {currentScreen === "victory" && (
-        <section>
-          <h2>Victory</h2>
-          <p>Your champion has proven worthy.</p>
-          <pre>{JSON.stringify(player, null, 2)}</pre>
-        </section>
-      )}
+  <VictoryScreen player={player} />
+)}
     </main>
   )
 }
