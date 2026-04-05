@@ -62,17 +62,32 @@ export default function AbilityDraft({ onConfirm }: Props) {
       </div>
 
       <div style={{ marginTop: "24px" }}>
-        <h3>Chosen Abilities</h3>
+  <h3>Chosen Abilities</h3>
 
-        {chosenAbilityIds.length === 0 && <p>No abilities chosen yet.</p>}
+  {chosenAbilityIds.length === 0 && (
+    <p>No abilities chosen yet.</p>
+  )}
 
-        {chosenAbilityIds.length > 0 && (
-          <ul>
-            {chosenAbilityIds.map((abilityId) => (
-              <li key={abilityId}>{abilityId}</li>
-            ))}
-          </ul>
-        )}
+  {chosenAbilityIds.length > 0 && (
+    <ul>
+      {chosenAbilityIds.map((abilityId) => {
+
+        const ability = allAbilities.find(a => a.id === abilityId)
+
+        if (!ability) return null
+
+        return (
+          <li key={abilityId}>
+            <strong>{ability.name}</strong>
+            <br/>
+            <small>{ability.description}</small>
+          </li>
+        )
+
+      })}
+    </ul>
+  )}
+</div>
       </div>
     </div>
   )
