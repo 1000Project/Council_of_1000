@@ -1,0 +1,107 @@
+[
+  {
+    "id": "blade_storm",
+    "name": "Blade Storm",
+    "description": "Deal 8 damage to the enemy.",
+    "type": "offense",
+    "power": 8
+  },
+  {
+    "id": "swift_strike",
+    "name": "Swift Strike",
+    "description": "Deal 6 damage and act first next turn.",
+    "type": "offense",
+    "power": 6
+  },
+  {
+    "id": "arc_pulse",
+    "name": "Arc Pulse",
+    "description": "Deal 7 energy damage.",
+    "type": "offense",
+    "power": 7
+  },
+  {
+    "id": "guardian_field",
+    "name": "Guardian Field",
+    "description": "Reduce next incoming damage by 5.",
+    "type": "defense",
+    "shield": 5
+  },
+  {
+    "id": "iron_skin",
+    "name": "Iron Skin",
+    "description": "Reduce next incoming damage by 4.",
+    "type": "defense",
+    "shield": 4
+  },
+  {
+    "id": "resolve",
+    "name": "Resolve",
+    "description": "Restore 6 health.",
+    "type": "utility",
+    "heal": 6
+  },
+  {
+    "id": "focus_channel",
+    "name": "Focus Channel",
+    "description": "Increase next ability damage by 3.",
+    "type": "utility",
+    "buff": 3
+  },
+  {
+    "id": "mind_break",
+    "name": "Mind Break",
+    "description": "Deal 5 damage and weaken enemy attack.",
+    "type": "control",
+    "power": 5
+  },
+  {
+    "id": "chaos_mark",
+    "name": "Chaos Mark",
+    "description": "Deal 4 damage and apply unstable energy.",
+    "type": "control",
+    "power": 4
+  },
+  {
+    "id": "energy_surge",
+    "name": "Energy Surge",
+    "description": "Deal 9 damage but take 2 recoil damage.",
+    "type": "offense",
+    "power": 9
+  },
+  {
+    "id": "fortify",
+    "name": "Fortify",
+    "description": "Gain 5 temporary health.",
+    "type": "defense",
+    "heal": 5
+  },
+  {
+    "id": "precision_cut",
+    "name": "Precision Cut",
+    "description": "Deal 7 precise damage.",
+    "type": "offense",
+    "power": 7
+  },
+  {
+    "id": "second_wind",
+    "name": "Second Wind",
+    "description": "Restore 8 health when below half health.",
+    "type": "utility",
+    "heal": 8
+  },
+  {
+    "id": "null_barrier",
+    "name": "Null Barrier",
+    "description": "Negate the next enemy ability.",
+    "type": "defense",
+    "shield": 6
+  },
+  {
+    "id": "council_flame",
+    "name": "Council Flame",
+    "description": "Deal 10 damage. Signature prototype ability.",
+    "type": "offense",
+    "power": 10
+  }
+]
