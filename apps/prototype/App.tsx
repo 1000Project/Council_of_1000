@@ -2,10 +2,12 @@ import { useState } from "react"
 import LandingScreen from "./components/LandingScreen"
 import FactionSelection from "./components/FactionSelection"
 import ChampionBuilder from "./components/ChampionBuilder"
+import AbilityDraft from "./components/AbilityDraft"
 import {
   createNewPlayer,
   setFaction,
   setStats,
+  addAbility,
   type Player,
   type PlayerStats
 } from "./systems/playerState"
@@ -77,12 +79,19 @@ export default function App() {
 )}
 
       {currentScreen === "draft" && (
-        <section>
-          <h2>Ability Draft</h2>
-          <p>Ability draft placeholder</p>
-          <button onClick={goToBattle}>Continue to Battle</button>
-        </section>
-      )}
+  <AbilityDraft
+    onConfirm={(abilityIds: string[]) => {
+      let updatedPlayer = player
+
+      abilityIds.forEach((abilityId) => {
+        updatedPlayer = addAbility(updatedPlayer, abilityId)
+      })
+
+      setPlayer(updatedPlayer)
+      goToBattle()
+    }}
+  />
+)}}
 
       {currentScreen === "battle" && (
         <section>
