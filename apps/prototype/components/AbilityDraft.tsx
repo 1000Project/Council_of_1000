@@ -12,7 +12,7 @@ type Props = {
 const TOTAL_ROUNDS = 3
 
 export default function AbilityDraft({ onConfirm }: Props) {
-  const allAbilities = abilitiesData as Ability[]
+  const allAbilities: Ability[] = abilitiesData
 
   const [chosenAbilityIds, setChosenAbilityIds] = useState<string[]>([])
   const [round, setRound] = useState<number>(1)
