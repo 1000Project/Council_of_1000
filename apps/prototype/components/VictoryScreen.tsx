@@ -1,10 +1,18 @@
+import abilitiesData from "../data/abilities.json"
+import type { Ability } from "../systems/draftLogic"
 import type { Player } from "../systems/playerState"
 
 type Props = {
   player: Player
 }
 
+const allAbilities = abilitiesData as Ability[]
+
 export default function VictoryScreen({ player }: Props) {
+  const draftedAbilities = player.abilities
+    .map((abilityId) => allAbilities.find((ability) => ability.id === abilityId))
+    .filter(Boolean) as Ability[]
+
   return (
     <div>
       <h2>Victory</h2>
@@ -32,12 +40,14 @@ export default function VictoryScreen({ player }: Props) {
         <div>
           <h4>Abilities</h4>
 
-          {player.abilities.length === 0 ? (
+          {draftedAbilities.length === 0 ? (
             <p>No abilities drafted.</p>
           ) : (
             <ul>
-              {player.abilities.map((abilityId) => (
-                <li key={abilityId}>{abilityId}</li>
+              {draftedAbilities.map((ability) => (
+                <li key={ability.id}>
+                  <strong>{ability.name}</strong> — {ability.description}
+                </li>
               ))}
             </ul>
           )}
