@@ -1,0 +1,91 @@
+{
+  "enemy": {
+
+    "name": "Arena Construct",
+
+    "faction": "neutral",
+
+    "description": "A simulated opponent used to test new champions.",
+
+    "health": 35,
+
+    "difficulty": "tutorial"
+
+  },
+
+  "behavior": {
+
+    "type": "scripted",
+
+    "goal": "Ensure player victory",
+
+    "ai": false
+
+  },
+
+  "turnScript": [
+
+    {
+      "turn": 1,
+      "action": "attack",
+      "damage": 6,
+      "description": "Arena Construct strikes with a training blade."
+    },
+
+    {
+      "turn": 2,
+      "action": "attack",
+      "damage": 5,
+      "description": "Arena Construct tests your defense."
+    },
+
+    {
+      "turn": 3,
+      "action": "attack",
+      "damage": 4,
+      "description": "Arena Construct slows slightly."
+    },
+
+    {
+      "turn": 4,
+      "action": "attack",
+      "damage": 3,
+      "description": "Arena Construct weakens."
+    },
+
+    {
+      "turn": 5,
+      "action": "idle",
+      "damage": 0,
+      "description": "Arena Construct destabilizes."
+    },
+
+    {
+      "turn": 6,
+      "action": "defeat",
+      "damage": 0,
+      "description": "Arena Construct collapses."
+    }
+
+  ],
+
+  "safetyRules": {
+
+    "preventPlayerLoss": true,
+
+    "minimumPlayerHealth": 5,
+
+    "reduceDamageIfLowHealth": true
+
+  },
+
+  "prototypeNotes": [
+
+    "Enemy damage should adjust if player is near defeat",
+
+    "Tutorial enemy must never defeat player",
+
+    "Scripted combat ensures consistent experience"
+
+  ]
+}
