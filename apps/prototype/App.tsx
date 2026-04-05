@@ -1,3 +1,4 @@
+import LandingScreen from "./components/LandingScreen"
 import { useState } from "react"
 import { createNewPlayer, type Player } from "./systems/playerState"
 
@@ -36,12 +37,10 @@ export default function App() {
   return (
     <main>
       {currentScreen === "landing" && (
-        <section>
-          <h1>Council of 1000</h1>
-          <p>From a thousand champions, only the worthy ascend.</p>
-          <button onClick={goToFaction}>Enter the Realm</button>
-        </section>
-      )}
+
+  <LandingScreen onEnter={goToFaction} />
+
+)}
 
       {currentScreen === "faction" && (
         <section>
