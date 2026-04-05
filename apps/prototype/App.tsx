@@ -1,6 +1,8 @@
 import LandingScreen from "./components/LandingScreen"
 import { useState } from "react"
 import { createNewPlayer, type Player } from "./systems/playerState"
+import FactionSelection from "./components/FactionSelection"
+import { setFaction } from "./systems/playerState"
 
 type Screen =
   | "landing"
@@ -43,12 +45,20 @@ export default function App() {
 )}
 
       {currentScreen === "faction" && (
-        <section>
-          <h2>Faction Selection</h2>
-          <p>Faction screen placeholder</p>
-          <button onClick={goToBuilder}>Continue to Champion Builder</button>
-        </section>
-      )}
+
+  <FactionSelection
+    onConfirm={(factionId)=>{
+
+      const updatedPlayer = setFaction(player,factionId)
+
+      setPlayer(updatedPlayer)
+
+      goToBuilder()
+
+    }}
+  />
+
+)}
 
       {currentScreen === "builder" && (
         <section>
